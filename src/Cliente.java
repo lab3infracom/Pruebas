@@ -45,6 +45,8 @@ public class Cliente {
 
             System.out.println("Se recibe la respuesta del servidor"+ new String(respuesta.getData()));
 
+            socketUDP.close();
+
         } catch (SocketException e) {
             System.out.println("Error al crear el socket");
         } catch (UnknownHostException e) {
