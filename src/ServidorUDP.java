@@ -34,15 +34,13 @@ public class ServidorUDP {
 
             System.out.println("Se manda el mensaje de confirmación. (NO es TCP, no buscamos hacer Acknowledge)");
 
+            socket.setDatagramSocketImplFactory(null);
+
             // while(true){
             // }
 
         } catch (SocketException ex) {
             System.out.println("Error al crear el socket");
         }
-
-
-        
-        System.out.println("Hello, World!");
     }
 }
